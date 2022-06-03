@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Routes, Route } from "react-router";
 import { Nabvar } from "./navbar/Nabvar";
 import { Home } from "./pages/Index";
-import { About } from "./pages/About";
+import About from "./pages/About";
 import { Contact } from "./pages/Contact";
 function App() {
   return (
