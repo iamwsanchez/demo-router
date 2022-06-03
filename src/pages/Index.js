@@ -25,8 +25,8 @@ export const Home = () => {
         {loading && "Cargando..."}
         {!!data && data.length > 0 ? data.map((product) => {
             return(
-              <div className='col s6'>
-                <div key={product.id} className="card large">
+              <div key={product.id} className='col s6'>
+                <div  className="card large">
                   <div className="card-image waves-effect waves-block waves-light">
                     <img className="activator" src={product.image} alt={product.title}/>
                   </div>

@@ -5,15 +5,17 @@ import { Nabvar } from "./navbar/Nabvar";
 import { Home } from "./pages/Index";
 import About from "./pages/About";
 import { Contact } from "./pages/Contact";
+import Login from "./pages/Login";
 function App() {
   return (
-    <div class="container">
+    <div className="container">
       <Router>
         <Nabvar/>
         <Routes>
           <Route exact path="/" element ={<Home/>}/>
           <Route path="/About" element ={<About/>}/>
           <Route path="/Contact" element ={<Contact/>}/>
+          <Route path="/Login" element ={<Login/>}/>
         </Routes>
       </Router>
     </div>
