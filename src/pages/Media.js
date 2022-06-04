@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class About extends Component{
+class Media extends Component{
     constructor(props){
         super(props)
         this.initializeCanvas = this.initializeCanvas.bind(this);
@@ -16,7 +16,7 @@ class About extends Component{
         return (nextProps.audio !== this.props.audio);
     }
     componentDidUpdate() {
-        this.refs.audio.load();
+        
     }
     initializeCanvas() { 
         let canvas = document.getElementById("myCanvas");
@@ -49,16 +49,30 @@ class About extends Component{
         return(
             <>
                 <div className='row'>
-                        <audio ref="assets/audio/lion.mp3">
-                            <source src="assets/audio/lion.mp3" type="audio/mpeg"/>
-                            <source src="assets/audio/lion.ogg" type="audio/ogg"/>
-                            Tu navegador no sopota el formato de audio disponible.
-                        </audio>
+                    <div className='col s6'>
+                        <figure>
+                            <img src="assets/img/lion2.webp" alt="León" width={320}/>
+                            <figcaption>León</figcaption>
+                        </figure>
+                        <div className='row'>
+                            <audio controls>
+                                <source src="assets/audio/lion.mp3" type="audio/mpeg"/>
+                                <source src="assets/audio/lion.ogg" type="audio/ogg"/>
+                                Tu navegador no sopota el formato de audio disponible.
+                            </audio>
+                        </div>
+                    </div>
+                    <div className='col s6'>
+                        <video controls autoPlay loop width={420} height={320}>
+                            <source src="assets/video/class.mp4" type="video/mp4"/>
+                            <source src="assets/video/class.ogv" type="video/ogg"/>
+                        </video>
+                    </div>
                 </div>
                 <div className='row'>
                     <button className="waves-effect waves-light btn btn-draw" onClick={this.drawEllipse}>Trazar</button>
                     <br/><br/>
-                    <canvas id="myCanvas" width="900">
+                    <canvas id="myCanvas">
                         Este contenido no puede ser mostrado por tu navegador.
                     </canvas>
                 </div>
@@ -67,4 +81,4 @@ class About extends Component{
     }
 }
 
-export default About;
+export default Media;

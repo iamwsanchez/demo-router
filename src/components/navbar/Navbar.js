@@ -28,7 +28,7 @@ class Navbar extends Component{
                         <a href="#!" data-target="mobile-nav" className="sidenav-trigger"><i className="material-icons">menu</i></a>
                         <ul className="right hide-on-med-and-down">
                             <li><Link to="/"><i className="material-icons left">home</i>Inicio</Link></li>
-                            <li><Link to="/About"><i className="material-icons left">recent_actors</i>Acerca de...</Link></li>
+                            <li><Link to="/Media"><i className="material-icons left">recent_actors</i>Multimedia</Link></li>
                             <li><Link to="/Contact"><i className="material-icons left">send</i>Contáctanos</Link></li>
                             <li><Link to="/Login"><i className="material-icons left">key</i>Iniciar sesión</Link></li>
                         </ul>
@@ -36,7 +36,7 @@ class Navbar extends Component{
                 </nav>
                 <ul id="mobile-nav" className="sidenav">
                     <li><Link to="/"><i className="material-icons left">home</i>Inicio</Link></li>
-                    <li><Link to="/About"><i className="material-icons left">recent_actors</i>Acerca de...</Link></li>
+                    <li><Link to="/Media"><i className="material-icons left">recent_actors</i>Acerca de...</Link></li>
                     <li><Link to="/Contact"><i className="material-icons left">send</i>Contáctanos</Link></li>
                     <li><Link to="/Login"><i className="material-icons left">key</i>Iniciar sesión</Link></li>
                 </ul>                    
