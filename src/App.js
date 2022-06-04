@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Routes, Route } from "react-router";
-import { Nabvar } from "./navbar/Nabvar";
+import Navbar from "./components/navbar/Navbar";
 import { Home } from "./pages/Index";
 import About from "./pages/About";
 import { Contact } from "./pages/Contact";
@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="container">
       <Router>
-        <Nabvar/>
+        <Navbar/>
         <Routes>
           <Route exact path="/" element ={<Home/>}/>
           <Route path="/About" element ={<About/>}/>
