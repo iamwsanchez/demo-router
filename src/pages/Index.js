@@ -4,12 +4,23 @@ import ProductService from '../services/ProductService'
 export const Home = () => {
     const [loading, setLoading] = useState(false)
     const [data, setData] = useState(null)
+    /*const [userInfo, setUserInfo] = useState({
+      estado1: '', estado2: ''
+    })*/
+
+
 
     useEffect(() => {
         setLoading(true)
         ProductService.getAll()
             .then(({ data }) => {
               setData(data)
+              /*setUserInfo(prev=> {return {
+                ...prev,
+                estado2: ''
+              }
+              
+              })*/
             })
             .catch(err => console.dir(err))
             .finally(() => setLoading(false))
